@@ -827,7 +827,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-muted-foreground text-sm">
-              © 2024 MD. Omur Faruque Talukder. All rights reserved.
+              © 2025 MD. Omur Faruque Talukder. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
