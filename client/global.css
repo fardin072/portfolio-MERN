@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Portfolio Theme - Off-white light and sophisticated dark modes
+   * HSL format for all variables to match tailwind.config.ts expectations
+   */
+  :root {
+    /* Main theme colors - Off-white light mode */
+    --background: 30 15% 98%;
+    --foreground: 240 9% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 9% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 9% 15%;
+
+    --primary: 345 65% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 95%;
+    --secondary-foreground: 345 65% 38%;
+
+    --muted: 30 10% 92%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 345 65% 95%;
+    --accent-foreground: 345 65% 38%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 8% 88%;
+    --input: 30 8% 88%;
+    --ring: 345 65% 38%;
+
+    --radius: 0.75rem;
+
+    /* Brand colors - Modern wine gradient */
+    --brand-50: 345 65% 98%;
+    --brand-100: 345 65% 95%;
+    --brand-200: 345 65% 90%;
+    --brand-300: 345 65% 80%;
+    --brand-400: 345 65% 65%;
+    --brand-500: 345 65% 50%;
+    --brand-600: 345 65% 40%;
+    --brand-700: 345 65% 30%;
+    --brand-800: 345 65% 25%;
+    --brand-900: 345 65% 20%;
+
+    /* Neutral colors - Warm off-white palette */
+    --neutral-50: 30 15% 98%;
+    --neutral-100: 30 12% 95%;
+    --neutral-200: 30 10% 88%;
+    --neutral-300: 30 8% 75%;
+    --neutral-400: 30 6% 60%;
+    --neutral-500: 30 5% 45%;
+    --neutral-600: 30 6% 35%;
+    --neutral-700: 30 7% 25%;
+    --neutral-800: 30 8% 15%;
+    --neutral-900: 30 10% 8%;
+  }
+
+  .dark {
+    /* Dark theme - Sophisticated charcoal with warm undertones */
+    --background: 240 8% 8%;
+    --foreground: 30 15% 95%;
+
+    --card: 240 6% 12%;
+    --card-foreground: 30 15% 95%;
+
+    --popover: 240 6% 12%;
+    --popover-foreground: 30 15% 95%;
+
+    --primary: 345 70% 65%;
+    --primary-foreground: 240 8% 8%;
+
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 30 15% 95%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 30 8% 65%;
+
+    --accent: 240 6% 18%;
+    --accent-foreground: 345 70% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 15% 95%;
+
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 345 70% 65%;
+
+    /* Brand colors adjusted for dark mode */
+    --brand-50: 240 8% 8%;
+    --brand-100: 240 6% 12%;
+    --brand-200: 240 6% 18%;
+    --brand-300: 240 8% 25%;
+    --brand-400: 345 70% 45%;
+    --brand-500: 345 70% 55%;
+    --brand-600: 345 70% 65%;
+    --brand-700: 345 70% 75%;
+    --brand-800: 345 70% 80%;
+    --brand-900: 345 70% 85%;
+
+    /* Neutral colors for dark mode */
+    --neutral-50: 30 15% 95%;
+    --neutral-100: 30 12% 85%;
+    --neutral-200: 30 10% 75%;
+    --neutral-300: 30 8% 65%;
+    --neutral-400: 30 6% 55%;
+    --neutral-500: 30 5% 45%;
+    --neutral-600: 30 6% 35%;
+    --neutral-700: 30 7% 25%;
+    --neutral-800: 240 6% 15%;
+    --neutral-900: 240 8% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
