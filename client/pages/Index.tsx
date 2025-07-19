@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import {
   ArrowDown,
   Code,
@@ -55,7 +56,7 @@ export default function Index() {
     {
       category: "Programming Languages",
       icon: <Code className="h-6 w-6" />,
-      technologies: ["JavaScript", "C++", "Python", "HTML", "CSS"],
+      technologies: ["JavaScript", "TypeScript", "C", "C++", "Python", "HTML", "CSS"],
     },
     {
       category: "MERN Stack",
@@ -92,38 +93,33 @@ export default function Index() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "High School Admin Project",
       description:
-        "Full-stack MERN e-commerce platform with payment integration, admin dashboard, and real-time inventory management.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      image: "/placeholder.svg",
-      github: "https://github.com/fardin072/ecommerce",
-      live: "https://ecommerce-demo.com",
+        "Web-based school result management system with student data entry, mark sheet generation, and XLSX import/export, integrated with IndexedDB for offline support.",
+      technologies: ["React", "Dixie.js", "IndexedDB", "TypeScript"],
+      image: "/ghs-admin.png",
+      github: "https://github.com/fardin072/ghs-admin.git",
+      live: "https://guzia-high-school-admin.netlify.app/",
     },
     {
-      title: "Task Management App",
+      title: "Task Management Application",
       description:
-        "Collaborative task management application with real-time updates, team workspaces, and advanced analytics.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Socket.io",
-      ],
-      image: "/placeholder.svg",
-      github: "https://github.com/fardin072/taskmanager",
-      live: "https://taskmanager-demo.com",
+        "TaskCove is a simple yet powerful task management web application that allows users to add, update, remove, and mark tasks as done.",
+      technologies: ["React", "LocalStorage", "Tailwind", "JavaScript"],
+      image: "/task-cove.png",
+      github: "https://github.com/fardin072/Task-Management-System---TaskCove.git",
+      live: "https://task-cove.netlify.app/",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Huddle - [Single Page]",
       description:
-        "Analytics dashboard for social media management with data visualization and automated reporting features.",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL"],
-      image: "/placeholder.svg",
-      github: "https://github.com/fardin072/social-dashboard",
-      live: "https://social-dashboard-demo.com",
+        "Welcome to Huddle, a community-building platform designed to help you connect with your audience in meaningful ways. This repository contains the HTML and CSS code for the Huddle landing page.",
+      technologies: ["React", "Tailwind"],
+      image: "/huddle.png",
+      github: "https://github.com/fardin072/huddle.git",
+      live: "https://huddle-the-community.netlify.app/",
     },
+
   ];
 
   return (
@@ -480,7 +476,7 @@ export default function Index() {
               </p>
             </div>
 
-            <Card className="border-2 border-primary/20">
+            <Card className="border-2 border-primary/20 mb-10">
               <CardContent className="p-8">
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -491,7 +487,82 @@ export default function Index() {
                       Uddhar
                     </p>
                     <p className="text-muted-foreground mb-4">
-                      Rajshahi | October 2024 - Present
+                      Rajshahi | October 2024 - June 2025
+                    </p>
+                  </div>
+                  <Badge className="bg-red-100 text-red-800 border-red-200">
+                    Former Role
+                  </Badge>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-lg font-medium text-foreground">
+                    Key Responsibilities:
+                  </h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Building responsive UIs with React and TypeScript.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Creating pixel-perfect designs using Tailwind CSS.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Integrating APIs with backend teams for seamless data flow.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Optimizing performance for fast load times and cross-browser compatibility.
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Applying security best practices for secure frontend implementations.
+                    </li>
+                  </ul>
+
+                  <div className="mt-6">
+                    <h4 className="text-lg font-medium text-foreground mb-3">
+                      Technologies Used:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "React",
+                        "TypeScript",
+                        "HTML",
+                        "CSS",
+                        "Tailwind CSS",
+                        "Material UI",
+                        "Git",
+                        "GitHub",
+                        "VS Code",
+                      ].map((tech, index) => (
+                        <Badge
+                          key={index}
+                          variant="outline"
+                          className="text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-primary/20">
+              <CardContent className="p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-semibold text-foreground mb-2">
+                      Frontend Developer
+                    </h3>
+                    <p className="text-xl text-primary font-medium mb-2">
+                      ACS Bootcamp Project - Finmate
+                    </p>
+                    <p className="text-muted-foreground mb-4">
+                      Dhaka | December 2024 - Present
                     </p>
                   </div>
                   <Badge className="bg-green-100 text-green-800 border-green-200">
@@ -563,6 +634,7 @@ export default function Index() {
         </div>
       </section>
 
+
       {/* Skills Section */}
       <section id="skills" className="py-20 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -610,6 +682,7 @@ export default function Index() {
         </div>
       </section>
 
+
       {/* Projects Section */}
       <section id="projects" className="py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -637,12 +710,26 @@ export default function Index() {
                     />
                     <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="bg-white/90 text-black px-4 py-2 rounded-lg font-medium">
-                          Coming Soon
+                        <div className="flex justify-center gap-4">
+                          {/* GitHub Button */}
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition"
+                          >
+                            <FaGithub size={24} />
+                          </a>
+                          {/* Live Demo Button */}
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition"
+                          >
+                            <FaExternalLinkAlt size={24} />
+                          </a>
                         </div>
-                        <p className="text-white text-sm mt-2">
-                          Project in development
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -650,7 +737,7 @@ export default function Index() {
                     <h3 className="text-xl font-semibold text-foreground mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-justify mb-4 text-sm leading-relaxed">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -671,6 +758,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 lg:py-32 bg-muted/30">
@@ -797,7 +885,7 @@ export default function Index() {
 
                     <Button
                       type="submit"
-                      disabled={isSubmitting || submitted}
+                      disabled={true}
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3"
                     >
                       {submitted ? (
@@ -814,6 +902,7 @@ export default function Index() {
                         </>
                       )}
                     </Button>
+
                   </form>
                 </CardContent>
               </Card>
