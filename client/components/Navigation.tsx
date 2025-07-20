@@ -146,7 +146,7 @@ export default function Navigation() {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6"
             >
               <a
-                href="https://cdn.builder.io/o/assets%2Fb3949e84736d4debbdc99c1105b1ff6a%2Ffc51961cd9e64a289b515945e2a7b23c?alt=media&token=707ac45d-72e0-4931-94ba-6c788860641e&apiKey=b3949e84736d4debbdc99c1105b1ff6a"
+                href="https://drive.google.com/file/d/1Byr_La5aY3R-aabNodd3Q86XsWqzVNxW/view?usp=sharing"
                 download="MD_Omur_Faruque_Talukder_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
