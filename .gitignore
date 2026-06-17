@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 .config/
+.claude/
+public/instruction.txt

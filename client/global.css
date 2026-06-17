@@ -136,3 +136,116 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
+@keyframes marquee-scroll-reverse {
+  0%   { transform: translateX(-25%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes tech-float {
+  from { transform: translateY(0px) rotate(var(--rot-start, 0deg)); }
+  to   { transform: translateY(var(--float-range, -8px)) rotate(var(--rot-end, 0deg)); }
+}
+
+@keyframes icon-shine-glint {
+  0%   { transform: translateX(-100%) skewX(-20deg); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-brand-400 bg-clip-text text-transparent;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-sm bg-background/80 border border-border/50;
+  }
+
+  .animate-marquee {
+    animation: marquee-scroll 30s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-scroll-reverse 36s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-marquee-reverse:hover {
+    animation-play-state: paused;
+  }
+
+  .tech-badge-card {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transform: translateZ(0);
+  }
+
+  .tech-badge-card:hover {
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.13);
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  .hero-grid-bg {
+    background-image: radial-gradient(circle, hsl(var(--border)) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+  }
+
+  .bg-radial-fade {
+    background: radial-gradient(ellipse 75% 75% at 50% 50%, transparent 25%, hsl(var(--background)) 100%);
+  }
+
+  .animate-tech-float {
+    animation: tech-float var(--float-dur, 3s) var(--float-delay, 0s) ease-in-out infinite alternate;
+  }
+
+  .icon-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .icon-shine::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 30%;
+    height: 120%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: translateX(-100%) skewX(-20deg);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .icon-shine:hover::after {
+    animation: icon-shine-glint 0.55s ease forwards;
+  }
+}
